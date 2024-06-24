@@ -651,25 +651,12 @@ header{
   margin: 50px 0;
 }
 
-.rates {
-  overflow: hidden; /* Ensure content doesn't extend outside this container */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slide-text {
-  white-space: nowrap; /* Prevent text from wrapping */
-  animation: slideRightToLeft 20s linear infinite;
-  display: inline-block; /* Ensure text stays in a single line */
-  width: max-content;
-}
 
 @keyframes slideRightToLeft {
-  0% {
-    transform: translateX(100%);
+  from {
+    transform: translateX(0%);
   }
-  100% {
+  to{
     transform: translateX(-100%);
   }
 }
@@ -1263,8 +1250,8 @@ header{
     height: 250px;
   }
 
-  .slide-text{
-    font-size: 10px;
+  .rates{
+    font-size: 12px;
   }
 }
 @media (max-width: 425px ){

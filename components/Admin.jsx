@@ -4,7 +4,7 @@ import React from 'react'
 const Admin = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
-  const [prices, setPrices] = useState({ "22K": "", "18K": "", "BuyBack": "" });
+  const [prices, setPrices] = useState({ "22K": "", "18K": ""});
   
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
@@ -50,7 +50,6 @@ const Admin = () => {
     Promise.all([
       updatePrice("22K", prices["22K"]),
       updatePrice("18K", prices["18K"]),
-      updatePrice("BuyBack", prices["BuyBack"]),
       updatePrice("Date", date)
     ])
     .then(() => {
@@ -83,11 +82,6 @@ const Admin = () => {
           <label>
             18K:
             <input type="text" name="18K" value={prices["18K"]} onChange={handleInputChange} required/>
-          </label>
-          <br />
-          <label>
-            BuyBack:
-            <input type="text" name="BuyBack" value={prices["BuyBack"]} onChange={handleInputChange} required/>
           </label>
           <br />
           <button type="submit">Update Prices</button>

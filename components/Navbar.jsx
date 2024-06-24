@@ -1,6 +1,6 @@
 import react, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-
+import Marquee from 'react-fast-marquee'
 
 function Navbar(){
     const [isToggled, setIsToggled] = useState(false);
@@ -13,7 +13,7 @@ function Navbar(){
         setIsToggled(false);
     };
 
-    const [prices, setPrices] = useState({ "22K": "", "18K": "", "BuyBack": "" , "Date": ""});
+    const [prices, setPrices] = useState({ "22K": "", "18K": "", "Date": ""});
 
     useEffect(()=>{
         const fetchPrices = () => {
@@ -36,7 +36,11 @@ function Navbar(){
 
     return (
             <header>
-                <div className="rates"><p className='slide-text'>Welcome to Choksi Shamalji Vallabhji &emsp; Today's Gold Rates &emsp; 22K: Rs.{prices["22K"]}, &emsp; 18K: Rs.{prices["18K"]}, &emsp; BuyBack: Rs.{prices["BuyBack"]} &emsp; Updated On: {prices["Date"]}</p></div>
+                <div className="rates">
+                    <Marquee>
+                        Welcome to Choksi Shamalji Vallabhji &emsp; Today's Gold Rates &#40;{prices["Date"]}&#41; &emsp; 22K: Rs.{prices["22K"]}, &emsp; 18K: Rs.{prices["18K"]} &emsp;&emsp;&emsp;
+                    </Marquee>
+                </div>
                 <div className="navbar-brand">
                     <div className="Logo"><img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1718630691/ejsuarmodhmnpzr5viyr.png' alt="Logo"/></div>
                     <div className="Name">
