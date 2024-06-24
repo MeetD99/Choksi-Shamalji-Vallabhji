@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import MessageBG from '../graphics/sendmessage-bg.png'
-import Peacock from '../graphics/peacock.png'
+import MessageBG from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213513/brwo90sr491nhxc3wcjm.png'
+import Peacock from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png'
 import emailjs from 'emailjs-com';
 
 const SendMessage = () => {

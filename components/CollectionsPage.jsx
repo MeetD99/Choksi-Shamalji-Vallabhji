@@ -1,9 +1,9 @@
 import React from 'react'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
-import CollectionBG1 from '../graphics/collection-banner.png'
-import CollectionBG2 from '../graphics/collection-banner2.png'
-import CollectionBG3 from '../graphics/collection-banner3.png'
+import CollectionBG1 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213423/h35mb6cimcp3wndfixzx.png'
+import CollectionBG2 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213428/v0jylwtyttjh0xacj6fv.png'
+import CollectionBG3 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213431/ivefrayeox3wpg8f0h3t.png'
 
 const CollectionsPage = () => {
   return (

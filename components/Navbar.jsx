@@ -1,4 +1,4 @@
-import PNG from '../graphics/PNG.png'
+import PNG from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1718630691/ejsuarmodhmnpzr5viyr.png'
 import react, { useState } from 'react'
 import { Link } from 'react-router-dom';
 

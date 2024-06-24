@@ -192,7 +192,7 @@ header{
   }
   
 .mosaic-container{
-  background-image: url('../graphics/damask1.jpg');
+  background-image: url('https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213436/guocyrrnrpxrxpoxfm8p.jpg');
 
 }
 
@@ -411,7 +411,7 @@ header{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-image: url('../graphics/damask1.jpg');
+  background-image: url('https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213436/guocyrrnrpxrxpoxfm8p.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 4;
@@ -511,7 +511,7 @@ header{
 }
 
 .cc-wrapper{
-  background-image: url('../graphics/damask1.jpg');
+  background-image: url('https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213436/guocyrrnrpxrxpoxfm8p.jpg');
 }
 
 .circular-carousel{

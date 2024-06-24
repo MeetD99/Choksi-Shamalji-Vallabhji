@@ -1,5 +1,5 @@
 import React from 'react'
-import BorderImage from '../graphics/border-element.png';
+import BorderImage from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213414/iigcowstp2nr8xupbrcr.png';
 
 const Border = () => {
   return (

@@ -1,7 +1,6 @@
 import React from 'react'
-import Peacock from '../graphics/peacock.png'
-import Showroom from '../graphics/showroom.png'
-import Border from '../components/Border.jsx'
+import Peacock from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png'
+import Showroom from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213515/ievufzavkvdskyhgu2bx.png'
 import { Link } from 'react-router-dom'
 
 const About = () => {

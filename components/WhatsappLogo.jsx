@@ -1,5 +1,5 @@
 import React from 'react'
-import WALogo from '../graphics/WALogo.png'
+import WALogo from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213519/bthuk8r5ygjgtghfeuqi.png'
 
 const WhatsappLogo = () => {
   return (

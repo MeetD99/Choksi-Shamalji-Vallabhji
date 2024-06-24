@@ -1,5 +1,5 @@
 import React from 'react'
-import Peacock from '../graphics/peacock.png'
+import Peacock from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png'
 import SendMessage from './SendMessage'
 
 const ContactUs = () => {
