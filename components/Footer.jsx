@@ -48,7 +48,7 @@ const Footer = () => {
                     </div>
             </div>
             <div className="footer-copyright">
-                    <p>&#169; Choksi Shamalji Vallabhji 2023. All Rights Reserved.</p>
+                    <p><Link to={'/admin'}>&#169;</Link> Choksi Shamalji Vallabhji 2023. All Rights Reserved.</p>
                     <ul className="list-unstyled-social-media">
                         <li className="ms-3">
                             <a className="link-body-emphasis" href="https://instagram.com/choksi_shamalji_vallabhji?igshid=MzRlODBiNWFlZA==" target="_blank">

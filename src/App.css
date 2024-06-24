@@ -458,6 +458,12 @@ header{
   padding: 20px 80px 20px 40px;
 }
 
+.footer-copyright>p>a{
+  text-decoration: none;
+  color: black;
+  cursor: default;
+}
+
 .list-unstyled, .list-unstyled-social-media, .list-unstyled-links{
   list-style: none;
 }
