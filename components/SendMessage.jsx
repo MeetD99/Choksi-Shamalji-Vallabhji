@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import MessageBG from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213513/brwo90sr491nhxc3wcjm.png'
-import Peacock from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png'
 import emailjs from 'emailjs-com';
 
 const SendMessage = () => {
@@ -43,12 +41,12 @@ const SendMessage = () => {
   return (
     <div className="sendmessage">
         <div className="bg">
-            <img src={MessageBG} alt="" />
+            <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213513/brwo90sr491nhxc3wcjm.png' alt="" />
         </div>
         <div className="aboutus-title">
-                <img src={Peacock} alt=""  style={{transform: "scaleX(-1)" }} />
+                <img src="https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png" alt=""  style={{transform: "scaleX(-1)" }} />
                 <h2>Send us a Message!</h2>
-                <img src={Peacock} alt="" />
+                <img src="https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png" alt="" />
         </div>
         <div className="message-form">
             <form onSubmit={handleSubmit}>

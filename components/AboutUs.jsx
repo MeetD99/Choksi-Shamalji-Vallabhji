@@ -1,19 +1,15 @@
 import React, { useState } from 'react'
-import Peacock from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png'
-import Showroom from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213515/ievufzavkvdskyhgu2bx.png'
-import Showroom2 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213517/mphrz0ykecxymlkd9jpe.png'
 import 'react-fancy-circular-carousel/FancyCarousel.css'
 import FancyCarousel from 'react-fancy-circular-carousel'
-import Circle1 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719214625/em2apsqlquce2shrljtm.png'
-import Circle2 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719214626/qgslccllm3rcim5of6ys.png'
-import Circle3 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719214634/eoaf8ulqk9kqk7xevhfw.png'
-import Circle4 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719214637/szuh1pcknwygut96aize.png'
-import Circle5 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719214640/glfh4unhmrvuhxeu4j10.png'
-import Circle6 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719214646/rqgcetwufdeefabcpg0d.png'
 
 const AboutUs = () => {
     const [focusElement, setFocusElement] = useState(0);
-    const images = [Circle1, Circle2, Circle3, Circle4, Circle5, Circle6];
+    const images = ['https://res.cloudinary.com/di1qhxfqv/image/upload/v1719214625/em2apsqlquce2shrljtm.png', 
+      'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719214626/qgslccllm3rcim5of6ys.png', 
+      'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719214634/eoaf8ulqk9kqk7xevhfw.png', 
+      'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719214637/szuh1pcknwygut96aize.png', 
+      'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719214640/glfh4unhmrvuhxeu4j10.png', 
+      'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719214646/rqgcetwufdeefabcpg0d.png'];
     const info = ["Quality Craftsmanship", "Cutomer Satisfaction", "Timeless Elegance", 
         "Authenticity & Trust", "Innovative Design", "Sustainable Luxury"];
     const desc = [
@@ -29,13 +25,13 @@ const AboutUs = () => {
     <>
     <div className="aboutus">
         <div className="aboutus-title">
-          <img src={Peacock} alt=""  style={{transform: "scaleX(-1)" }} />
+          <img src="https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png" alt=""  style={{transform: "scaleX(-1)" }} />
           <h2>About Us</h2>
-          <img src={Peacock} alt="" />
+          <img src="https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png" alt="" />
         </div>
         <div className="aboutus-main">
           <div className="aboutus-image">
-            <img src={Showroom} alt="" />
+            <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213515/ievufzavkvdskyhgu2bx.png' alt="" />
           </div>
           <div className='aboutus-text'>
             <p>
@@ -59,14 +55,14 @@ const AboutUs = () => {
                 </p>
             </div>
             <div className="aboutus-image-2">
-                <img src={Showroom2} alt="" />
+                <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213517/mphrz0ykecxymlkd9jpe.png' alt="" />
             </div>
         </div>
     </div>
     <div className="aboutus-title">
-          <img src={Peacock} alt=""  style={{transform: "scaleX(-1)" }} />
+          <img src="https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png" alt=""  style={{transform: "scaleX(-1)" }} />
           <h2>Our Values</h2>
-          <img src={Peacock} alt="" />
+          <img src="https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png" alt="" />
     </div>
     <div className="cc-wrapper">
       <div className="carousel circular-carousel">

@@ -1,6 +1,4 @@
 import React from 'react'
-import Peacock from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png'
-import Showroom from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213515/ievufzavkvdskyhgu2bx.png'
 import { Link } from 'react-router-dom'
 
 const About = () => {
@@ -8,13 +6,13 @@ const About = () => {
     <>
       <div className="aboutus">
         <div className="aboutus-title">
-          <img src={Peacock} alt=""  style={{transform: "scaleX(-1)" }} />
+          <img src="https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png" alt=""  style={{transform: "scaleX(-1)" }} />
           <h2>About Us</h2>
-          <img src={Peacock} alt="" />
+          <img src="https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png" alt="" />
         </div>
         <div className="aboutus-main">
           <div className="aboutus-image">
-            <img src={Showroom} alt="" />
+            <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213515/ievufzavkvdskyhgu2bx.png' alt="" />
           </div>
           <div className='aboutus-text'>
             <p>

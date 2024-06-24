@@ -1,16 +1,5 @@
 import React from 'react';
 import Border from './Border';
-import Necklaces from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213507/cxvzlbuclo8ppseivvsa.png';
-import Earrings from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213437/du9e89gkhi37gzo1qeiy.png';
-import PendantSets from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213510/hwpqxwbauorgb1j4dkzz.png';
-import Rings from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213512/vlrvg7if0eebq5h4pavc.png';
-import Bracelets from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213420/puikuigokzrfmbifn3xa.png';
-import SilverOrnaments from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213520/pc1xklafieiuis1n5rqq.png';
-import Explore1 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213443/besfl114mbmyd9wguiqj.png';
-import Explore2 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213452/e1id7dgw3icrpmtmfm8m.png';
-import Explore3 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213501/vnwcqisfsg7wkrhgsa1v.png';
-import Explore4 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213503/if9g9hisgm8prfyxn7oh.png';
-import Explore5 from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213505/xtksb9nydaieetnv4faj.png';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -67,24 +56,24 @@ function Collection() {
         <div className="image-mosaic">
           <div className="col1">
             <div className="photo">
-              <img src={Explore1} alt="" />
+              <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213443/besfl114mbmyd9wguiqj.png' alt="" />
             </div>
             <div className="photo">
-            <img src={Explore4} alt="" />
+            <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213503/if9g9hisgm8prfyxn7oh.png' alt="" />
             </div>
           </div>
           <div className="col2">
             <div className="photo">
-              <img src={Explore3} alt="" />
+              <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213501/vnwcqisfsg7wkrhgsa1v.png' alt="" />
             </div>
             
           </div>
           <div className="col3">
             <div className="photo">
-              <img src={Explore2} alt="" />
+              <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213452/e1id7dgw3icrpmtmfm8m.png' alt="" />
             </div>
             <div className="photo">
-              <img src={Explore5} alt="" />
+              <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213505/xtksb9nydaieetnv4faj.png' alt="" />
             </div>
           </div>
         </div>
@@ -97,37 +86,37 @@ function Collection() {
             <Slider {...settings}>
               <div className="card">
                   <Link to={"/"}>
-                    <img src={Necklaces} alt="Necklaces" />
+                    <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213507/cxvzlbuclo8ppseivvsa.png' alt="Necklaces" />
                     <h3>Necklaces</h3>
                   </Link>
                 </div>
                 <div className="card">
                   <Link to={"/"}>
-                    <img src={Rings} alt="Rings" />
+                    <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213512/vlrvg7if0eebq5h4pavc.png' alt="Rings" />
                     <h3>Rings</h3>
                   </Link>
                 </div>
                 <div className="card">
                   <Link to={"/"}>
-                    <img src={Bracelets} alt="Bracelets" />
+                    <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213420/puikuigokzrfmbifn3xa.png' alt="Bracelets" />
                     <h3>Bracelets</h3>
                   </Link>
                 </div>
                 <div className="card">
                   <Link to={"/"}>
-                    <img src={PendantSets} alt="Pendant Sets" />
+                    <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213510/hwpqxwbauorgb1j4dkzz.png' alt="Pendant Sets" />
                     <h3>Pendant Sets</h3>
                   </Link>
                 </div>
                 <div className="card">
                   <Link to={"/"}>
-                    <img src={Earrings} alt="Earrings" />
+                    <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213437/du9e89gkhi37gzo1qeiy.png' alt="Earrings" />
                     <h3>Earrings</h3>
                   </Link>
                 </div>
                 <div className="card">
                   <Link to={"/"}>
-                    <img src={SilverOrnaments} alt="Silver Ornaments" />
+                    <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213520/pc1xklafieiuis1n5rqq.png' alt="Silver Ornaments" />
                     <h3>Silver Ornaments</h3>
                   </Link>
                 </div>

@@ -1,14 +1,13 @@
 import React from 'react'
-import Peacock from 'https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png'
 import SendMessage from './SendMessage'
 
 const ContactUs = () => {
   return (
     <>
         <div className="aboutus-title">
-          <img src={Peacock} alt=""  style={{transform: "scaleX(-1)" }} />
+          <img src="https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png" alt=""  style={{transform: "scaleX(-1)" }} />
           <h2>Contact Us</h2>
-          <img src={Peacock} alt="" />
+          <img src="https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213508/lu3gv4x8qgqusoe2xxak.png" alt="" />
         </div>
         <div className="contact-details-wrapper">
             <div className="c-row">
