@@ -3,26 +3,6 @@
   src: url('../fonts/selima/Selima\ .ttf') format('truetype');
 }
 
-@font-face {
-  font-family: "Lilita_One";
-  src: url('../fonts/Lilita_One/LilitaOne-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url('../fonts/poppins/Poppins-Regular.otf');
-}
-
-@font-face{
-  font-family: "Seasons";
-  src: url('../fonts/Seasons/Demo_Fonts/Fontspring-DEMO-theseasons-reg.otf');
-}
-
-@font-face {
-  font-family: "Florania";
-  src: url('../fonts/florania_2/Florania\ Trial.otf');
-}
-
 html{
   scroll-behavior: smooth;
 }
@@ -74,12 +54,6 @@ header{
     text-decoration: none;
     color: #7F5104;
     font-size: 50px;
-}
-
-.navbar-brand .Name p{
-    font-family: "Poppins";
-    font-size: 13.5px;
-    margin: 0;
 }
 
 .navbar-brand .social-media{
@@ -341,7 +315,7 @@ header{
 .aboutus-btn{
   padding: 5px 7px;
   width: fit-content;
-  font-family: "Florania";
+  font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
   color: beige;
   background-color: #7F5104;
@@ -371,7 +345,7 @@ header{
 .aboutus-title h2{
   color: #7F5104;
   font-size: 40px;
-  font-family: "Florania";
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .whatsapp-float {
@@ -452,7 +426,7 @@ header{
   border: 1px solid #7F5104;
   box-shadow: 2px 2px 2px beige;
   color: beige;
-  font-family: 'Florania';
+  font-family: 'Times New Roman', Times, serif;
   padding: 5px 8px;
   cursor: pointer;
 }
