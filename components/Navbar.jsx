@@ -7,6 +7,11 @@ function Navbar(){
     const handleToggle = () => {
         setIsToggled(!isToggled);
     };
+
+    const closeMenu = () => {
+        setIsToggled(false);
+    };
+
     return (
             <header>
                 <div className="rates">Live Rates</div>
@@ -28,10 +33,10 @@ function Navbar(){
                 
                 <div className={`navbar-list ${isToggled ? 'show' : ''}`}>
                     <ul className="nav-list">
-                        <li><Link to={'/'} className="list-item">Home</Link></li>
-                        <li><Link to={'/aboutus'} className="list-item">About Us</Link></li>
-                        <li><Link to={'/collection'} className="list-item">Collection</Link></li>
-                        <li><Link to={'/contactus'} className="list-item">Contact Us</Link></li>
+                        <li><Link to={'/'} className="list-item" onClick={closeMenu}>Home</Link></li>
+                        <li><Link to={'/aboutus'} className="list-item" onClick={closeMenu}>About Us</Link></li>
+                        <li><Link to={'/collection'} className="list-item" onClick={closeMenu}>Collection</Link></li>
+                        <li><Link to={'/contactus'} className="list-item" onClick={closeMenu}>Contact Us</Link></li>
                     </ul>
                 </div>
                 
