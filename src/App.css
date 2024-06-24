@@ -651,6 +651,26 @@ header{
   margin: 50px 0;
 }
 
+.rates {
+  overflow: hidden; /* Ensure content doesn't extend outside this container */
+}
+
+.slide-text {
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: slideRightToLeft 20s linear infinite;
+  display: inline-block; /* Ensure text stays in a single line */
+  width: max-content;
+}
+
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @media (max-width: 1360px){
   
   .aboutus-title h2{
@@ -1238,6 +1258,10 @@ header{
   .map-container iframe{
     width: 400px;
     height: 250px;
+  }
+
+  .slide-text{
+    font-size: 10px;
   }
 }
 @media (max-width: 425px ){

@@ -36,7 +36,7 @@ function Navbar(){
 
     return (
             <header>
-                <div className="rates"><p>Welcome to Choksi Shamalji Vallabhji &emsp; Today's Gold Rates &emsp; 22K: Rs.{prices["22K"]}, &emsp; 18K: Rs.{prices["18K"]}, &emsp; BuyBack: Rs.{prices["BuyBack"]} &emsp; Updated On: {prices["Date"]}</p></div>
+                <div className="rates"><p className='slide-text'>Welcome to Choksi Shamalji Vallabhji &emsp; Today's Gold Rates &emsp; 22K: Rs.{prices["22K"]}, &emsp; 18K: Rs.{prices["18K"]}, &emsp; BuyBack: Rs.{prices["BuyBack"]} &emsp; Updated On: {prices["Date"]}</p></div>
                 <div className="navbar-brand">
                     <div className="Logo"><img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1718630691/ejsuarmodhmnpzr5viyr.png' alt="Logo"/></div>
                     <div className="Name">
