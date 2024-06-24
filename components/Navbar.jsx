@@ -1,4 +1,4 @@
-import PNG from '/graphics/PNG.png'
+import PNG from '../graphics/PNG.png'
 import react, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ function Navbar(){
                 <div className="rates">Live Rates</div>
 
                 <div className="navbar-brand">
-                    <div className="Logo"><img src="../graphics/PNG.png" alt="Logo"/></div>
+                    <div className="Logo"><img src={ PNG } alt="Logo"/></div>
                     <div className="Name">
                         <Link to={'/'}>CHOKSI SHAMALJI VALLABHJI</Link>
                     </div>
