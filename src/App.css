@@ -630,6 +630,21 @@ header{
   border-radius: 10px;
 }
 
+.adminForm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.adminForm2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+
 @media (max-width: 1360px){
   
   .aboutus-title h2{

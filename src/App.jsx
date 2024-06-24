@@ -12,6 +12,7 @@ import Border from '../components/Border';
 import CollectionsPage from '../components/CollectionsPage';
 import ScrollRestoration from '../components/ScrollRestoration';
 import ContactUs from '../components/ContactUs.jsx';
+import Admin from '../components/Admin.jsx';
 
 function App() {
 
@@ -89,6 +90,7 @@ function App() {
             <Route path='/aboutus' element={<AboutUs />} />
             <Route path='/collection' element={<CollectionsPage/> }/>
             <Route path='/contactus' element={<ContactUs />} />
+            <Route path='/admin' element={<Admin/>} />
         </Routes>
         <Border />
         <Footer />

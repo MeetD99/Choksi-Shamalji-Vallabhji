@@ -1,5 +1,6 @@
-import react, { useState } from 'react'
+import react, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+
 
 function Navbar(){
     const [isToggled, setIsToggled] = useState(false);
@@ -12,10 +13,30 @@ function Navbar(){
         setIsToggled(false);
     };
 
+    const [prices, setPrices] = useState({ "22K": "", "18K": "", "BuyBack": "" , "Date": ""});
+
+    useEffect(()=>{
+        const fetchPrices = () => {
+            fetch('https://csv-backend-4hc6.onrender.com/')
+                .then(response => response.json())
+                .then(data => setPrices(data))
+                .catch(error => console.error('Error:', error));
+        };
+
+        // Fetch prices initially
+        fetchPrices();
+
+        // Set up polling to fetch prices every 10 seconds
+        const intervalId = setInterval(fetchPrices, 10000);
+
+        // Clean up interval on component unmount
+        return () => clearInterval(intervalId);
+    }, [])
+    
+
     return (
             <header>
-                <div className="rates">Live Rates</div>
-
+                <div className="rates"><p>Welcome to Choksi Shamalji Vallabhji &emsp; Today's Gold Rates &emsp; 22K: Rs.{prices["22K"]}, &emsp; 18K: Rs.{prices["18K"]}, &emsp; BuyBack: Rs.{prices["BuyBack"]} &emsp; Updated On: {prices["Date"]}</p></div>
                 <div className="navbar-brand">
                     <div className="Logo"><img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1718630691/ejsuarmodhmnpzr5viyr.png' alt="Logo"/></div>
                     <div className="Name">
