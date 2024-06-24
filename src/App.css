@@ -653,6 +653,9 @@ header{
 
 .rates {
   overflow: hidden; /* Ensure content doesn't extend outside this container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide-text {
