@@ -66,8 +66,8 @@ const Admin = () => {
     const date = new Date().toDateString();
 
     const updateGist = async (updatedPrices) => {
-      const gistId = process.env.GITHUB_GIST_ID; // Replace with your gist ID
-      const accessToken = process.env.GITHUB_TOKEN; // Replace with your GitHub personal access token
+      const gistId = import.meta.env.VITE_GITHUB_GIST_ID; // Replace with your gist ID
+      const accessToken = import.meta.env.VITE_GITHUB_TOKEN; // Replace with your GitHub personal access token
 
       try {
         const response = await fetch(`https://api.github.com/gists/${gistId}`, {

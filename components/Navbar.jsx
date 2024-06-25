@@ -18,13 +18,19 @@ function Navbar(){
     useEffect(()=>{
         const fetchGist = async () => {
             try {
-              const gistId = process.env.GITHUB_GIST_ID; // Replace with your gist ID
-              const response = await fetch(`https://api.github.com/gists/${gistId}`);
-              if (!response.ok) {
-                throw new Error('Failed to fetch gist');
-              }
+              const gistId = import.meta.env.VITE_GITHUB_GIST_ID; // Replace with your gist ID
+              const accessToken = import.meta.env.VITE_GITHUB_TOKEN;
+        
+            const response = await fetch(`https://api.github.com/gists/${gistId}`, {
+            // headers: {
+            //     Authorization: `token ${accessToken}`
+            // }
+            });
+
+            if (!response.ok) {
+            throw new Error('Failed to fetch gist');
+            }
               const gist = await response.json();
-              // Assuming your JSON file is named 'data.json' in the gist
               const content = gist.files['rates.json'].content;
               const parsedData = JSON.parse(content);
               setPrices(parsedData);

@@ -19,10 +19,10 @@ const SendMessage = () => {
         e.preventDefault();
 
         emailjs.send(
-            process.env.REACT_APP_EMAILJS_SERVICE_ID, // Replace with your EmailJS service ID
-            process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Replace with your EmailJS template ID
+            import.meta.env.VITE_REACT_APP_EMAILJS_SERVICE_ID, // Replace with your EmailJS service ID
+            import.meta.env.VITE_REACT_APP_EMAILJS_TEMPLATE_ID, // Replace with your EmailJS template ID
             formData,
-            process.env.REACT_APP_EMAILJS_USER_ID // Replace with your EmailJS user ID
+            import.meta.env.VITE_REACT_APP_EMAILJS_USER_ID // Replace with your EmailJS user ID
         )
         .then((result) => {
             setResponse('Email sent successfully!');
