@@ -27,38 +27,90 @@ const Admin = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
 
+  //   e.preventDefault();
+  //   const date = new Date().toDateString();
+
+  //   const updatePrice = async (key, value) => {
+  //     try {
+  //           const response = await fetch('http://localhost:3000/update', {
+  //               method: 'POST',
+  //               headers: {
+  //                   'Content-Type': 'application/json'
+  //               },
+  //               body: JSON.stringify({ key, value })
+  //           });
+  //           return await response.json();
+  //       } catch (error) {
+  //           return console.error('Error:', error);
+  //       }
+  //   };
+
+  //   Promise.all([
+  //     updatePrice("22K", prices["22K"]),
+  //     updatePrice("18K", prices["18K"]),
+  //     updatePrice("Date", date)
+  //   ])
+  //   .then(() => {
+  //     alert("Prices Updated successfully!");
+  //     setIsAuthenticated(false);
+  //     setPrices({ "22K": "", "18K": "", "BuyBack": "" });
+  //     setPassword("");
+  //   })
+  //   .catch(error => console.error('Error:', error));
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const date = new Date().toDateString();
 
-    const updatePrice = async (key, value) => {
+    const updateGist = async (updatedPrices) => {
+      const gistId = process.env.GITHUB_GIST_ID; // Replace with your gist ID
+      const accessToken = process.env.GITHUB_TOKEN; // Replace with your GitHub personal access token
+
       try {
-            const response = await fetch('https://csv-backend-4hc6.onrender.com/update', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ key, value })
-            });
-            return await response.json();
-        } catch (error) {
-            return console.error('Error:', error);
+        const response = await fetch(`https://api.github.com/gists/${gistId}`, {
+          method: 'PATCH',
+          headers: {
+            Authorization: `token ${accessToken}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            files: {
+              'rates.json': {
+                content: JSON.stringify(updatedPrices, null, 2),
+              },
+            },
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to update gist');
         }
+
+        return response.json();
+      } catch (error) {
+        console.error('Error updating gist:', error);
+        throw error;
+      }
     };
 
-    Promise.all([
-      updatePrice("22K", prices["22K"]),
-      updatePrice("18K", prices["18K"]),
-      updatePrice("Date", date)
-    ])
-    .then(() => {
-      alert("Prices Updated successfully!");
+    try {
+      await updateGist({
+        "22K": prices["22K"],
+        "18K": prices["18K"],
+        "Date": date,
+      });
+
+      alert("Prices updated successfully!");
       setIsAuthenticated(false);
-      setPrices({ "22K": "", "18K": "", "BuyBack": "" });
-      setPassword("");
-    })
-    .catch(error => console.error('Error:', error));
+      setPrices({ "22K": "", "18K": "" });
+      setPassword('');
+    } catch (error) {
+      console.error('Failed to update prices:', error);
+      alert('Failed to update prices. Please try again.');
+    }
   };
 
 

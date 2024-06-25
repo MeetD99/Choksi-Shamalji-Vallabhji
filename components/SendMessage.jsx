@@ -19,10 +19,10 @@ const SendMessage = () => {
         e.preventDefault();
 
         emailjs.send(
-            'service_h2z2rqn', // Replace with your EmailJS service ID
-            'template_zqn0cl9', // Replace with your EmailJS template ID
+            process.env.REACT_APP_EMAILJS_SERVICE_ID, // Replace with your EmailJS service ID
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Replace with your EmailJS template ID
             formData,
-            'WhiQT83xIgngsohZ5' // Replace with your EmailJS user ID
+            process.env.REACT_APP_EMAILJS_USER_ID // Replace with your EmailJS user ID
         )
         .then((result) => {
             setResponse('Email sent successfully!');

@@ -16,18 +16,27 @@ function Navbar(){
     const [prices, setPrices] = useState({ "22K": "", "18K": "", "Date": ""});
 
     useEffect(()=>{
-        const fetchPrices = () => {
-            fetch('https://csv-backend-4hc6.onrender.com/')
-                .then(response => response.json())
-                .then(data => setPrices(data))
-                .catch(error => console.error('Error:', error));
-        };
+        const fetchGist = async () => {
+            try {
+              const gistId = process.env.GITHUB_GIST_ID; // Replace with your gist ID
+              const response = await fetch(`https://api.github.com/gists/${gistId}`);
+              if (!response.ok) {
+                throw new Error('Failed to fetch gist');
+              }
+              const gist = await response.json();
+              // Assuming your JSON file is named 'data.json' in the gist
+              const content = gist.files['rates.json'].content;
+              const parsedData = JSON.parse(content);
+              setPrices(parsedData);
+            } catch (error) {
+              console.error('Error fetching gist:', error);
+            }
+          };
+      
+          fetchGist();
 
-        // Fetch prices initially
-        fetchPrices();
-
-        // Set up polling to fetch prices every 10 seconds
-        const intervalId = setInterval(fetchPrices, 10000);
+          // Set up polling to fetch prices every 10 seconds
+        const intervalId = setInterval(fetchGist, 10000);
 
         // Clean up interval on component unmount
         return () => clearInterval(intervalId);
