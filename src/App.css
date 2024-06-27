@@ -1,4 +1,7 @@
-@import url('https://fonts.cdnfonts.com/css/selima');
+@font-face {
+  font-family: "Selima";
+  src: url('../fonts/selima/Selima.ttf') format('truetype');
+}
 
 html{
   scroll-behavior: smooth;
