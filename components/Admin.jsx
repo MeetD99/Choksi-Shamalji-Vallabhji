@@ -1,5 +1,6 @@
 import { useContext, useState } from "react"
 import React from 'react'
+import PricesContext from "../components/PricesContext";
 
 const Admin = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
