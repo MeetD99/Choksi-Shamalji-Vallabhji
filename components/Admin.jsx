@@ -1,10 +1,11 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import React from 'react'
 
 const Admin = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
   const [prices, setPrices] = useState({ "22K": "", "18K": ""});
+  const { fetchGist } = useContext(PricesContext);
   
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
@@ -27,46 +28,12 @@ const Admin = () => {
     }));
   };
 
-  // const handleSubmit = (e) => {
-
-  //   e.preventDefault();
-  //   const date = new Date().toDateString();
-
-  //   const updatePrice = async (key, value) => {
-  //     try {
-  //           const response = await fetch('http://localhost:3000/update', {
-  //               method: 'POST',
-  //               headers: {
-  //                   'Content-Type': 'application/json'
-  //               },
-  //               body: JSON.stringify({ key, value })
-  //           });
-  //           return await response.json();
-  //       } catch (error) {
-  //           return console.error('Error:', error);
-  //       }
-  //   };
-
-  //   Promise.all([
-  //     updatePrice("22K", prices["22K"]),
-  //     updatePrice("18K", prices["18K"]),
-  //     updatePrice("Date", date)
-  //   ])
-  //   .then(() => {
-  //     alert("Prices Updated successfully!");
-  //     setIsAuthenticated(false);
-  //     setPrices({ "22K": "", "18K": "", "BuyBack": "" });
-  //     setPassword("");
-  //   })
-  //   .catch(error => console.error('Error:', error));
-  // };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const date = new Date().toDateString();
 
     const updateGist = async (updatedPrices) => {
-      const gistId = import.meta.env.VITE_GITHUB_GIST_ID; // Replace with your gist ID
+      const gistId = "13583f27f0799d24d6970e94906eb526"; // Replace with your gist ID
       const accessToken = import.meta.env.VITE_GITHUB_TOKEN; // Replace with your GitHub personal access token
 
       try {
@@ -107,6 +74,7 @@ const Admin = () => {
       setIsAuthenticated(false);
       setPrices({ "22K": "", "18K": "" });
       setPassword('');
+      fetchGist();
     } catch (error) {
       console.error('Failed to update prices:', error);
       alert('Failed to update prices. Please try again.');
@@ -137,6 +105,7 @@ const Admin = () => {
           </label>
           <br />
           <button type="submit">Update Prices</button>
+          {/* <button type="submit">Get updated prices!</button> */}
         </form>
       )}
     </> 

@@ -1,9 +1,11 @@
-import react, { useEffect, useState } from 'react'
+import react, { useEffect, useState, useContext } from 'react'
 import { Link } from 'react-router-dom';
 import Marquee from 'react-fast-marquee'
+import PricesContext from './PricesContext';
 
 function Navbar(){
     const [isToggled, setIsToggled] = useState(false);
+    const { prices } = useContext(PricesContext);
 
     const handleToggle = () => {
         setIsToggled(!isToggled);
@@ -12,43 +14,7 @@ function Navbar(){
     const closeMenu = () => {
         setIsToggled(false);
     };
-
-    const [prices, setPrices] = useState({ "22K": "", "18K": "", "Date": ""});
-
-    useEffect(()=>{
-        const fetchGist = async () => {
-            try {
-              const gistId = import.meta.env.VITE_GITHUB_GIST_ID; // Replace with your gist ID
-              const accessToken = import.meta.env.VITE_GITHUB_TOKEN;
-        
-            const response = await fetch(`https://api.github.com/gists/${gistId}`, {
-            // headers: {
-            //     Authorization: `token ${accessToken}`
-            // }
-            });
-
-            if (!response.ok) {
-            throw new Error('Failed to fetch gist');
-            }
-              const gist = await response.json();
-              const content = gist.files['rates.json'].content;
-              const parsedData = JSON.parse(content);
-              setPrices(parsedData);
-            } catch (error) {
-              console.error('Error fetching gist:', error);
-            }
-          };
-      
-          fetchGist();
-
-          // Set up polling to fetch prices every 10 seconds
-        const intervalId = setInterval(fetchGist, 10000);
-
-        // Clean up interval on component unmount
-        return () => clearInterval(intervalId);
-    }, [])
     
-
     return (
             <header>
                 <div className="rates">

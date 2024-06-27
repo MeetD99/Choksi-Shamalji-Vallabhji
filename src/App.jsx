@@ -13,6 +13,7 @@ import CollectionsPage from '../components/CollectionsPage';
 import ScrollRestoration from '../components/ScrollRestoration';
 import ContactUs from '../components/ContactUs.jsx';
 import Admin from '../components/Admin.jsx';
+import PricesContext, { PricesProvider } from '../components/PricesContext';
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
         const totalImages = images.length;
         const totalIcons = icons.length;
         let imagesLoaded = 0;
-        let iconsLodaed = 0;
+        let iconsLoaded = 0;
 
         const handleImageLoad = () => {
             imagesLoaded += 1;
@@ -79,7 +80,7 @@ function App() {
   return (
     <>
       {loading && <PreLoader/>}
-      
+      <PricesProvider>
       <BrowserRouter>
         <WhatsappLogo />
         <ScrollToTop />
@@ -95,6 +96,7 @@ function App() {
         <Border />
         <Footer />
       </BrowserRouter>
+      </PricesProvider>
     </>
   
   )
