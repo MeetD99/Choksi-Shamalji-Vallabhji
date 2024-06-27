@@ -56,24 +56,24 @@ function Collection() {
         <div className="image-mosaic">
           <div className="col1">
             <div className="photo">
-              <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213443/besfl114mbmyd9wguiqj.png' alt="" />
+            <Link to={'/collection'}><img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213443/besfl114mbmyd9wguiqj.png' alt="" /></Link>
             </div>
             <div className="photo">
-            <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213503/if9g9hisgm8prfyxn7oh.png' alt="" />
+            <Link to={'/collection'}><img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213503/if9g9hisgm8prfyxn7oh.png' alt="" /></Link>
             </div>
           </div>
           <div className="col2">
             <div className="photo">
-              <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213501/vnwcqisfsg7wkrhgsa1v.png' alt="" />
+            <Link to={'/collection'}><img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213501/vnwcqisfsg7wkrhgsa1v.png' alt="" /></Link>
             </div>
             
           </div>
           <div className="col3">
             <div className="photo">
-              <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213452/e1id7dgw3icrpmtmfm8m.png' alt="" />
+              <Link to={'/collection'}><img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213452/e1id7dgw3icrpmtmfm8m.png' alt="" /></Link>
             </div>
             <div className="photo">
-              <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213505/xtksb9nydaieetnv4faj.png' alt="" />
+              <Link to={'/collection'}><img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213505/xtksb9nydaieetnv4faj.png' alt="" /></Link>
             </div>
           </div>
         </div>
@@ -85,37 +85,37 @@ function Collection() {
           <div className="slider-container">
             <Slider {...settings}>
               <div className="card">
-                  <Link to={"/"}>
+                  <Link to={"/collection"}>
                     <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213507/cxvzlbuclo8ppseivvsa.png' alt="Necklaces" />
                     <h3>Necklaces</h3>
                   </Link>
                 </div>
                 <div className="card">
-                  <Link to={"/"}>
+                  <Link to={"/collection"}>
                     <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213512/vlrvg7if0eebq5h4pavc.png' alt="Rings" />
                     <h3>Rings</h3>
                   </Link>
                 </div>
                 <div className="card">
-                  <Link to={"/"}>
+                  <Link to={"/collection"}>
                     <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213420/puikuigokzrfmbifn3xa.png' alt="Bracelets" />
                     <h3>Bracelets</h3>
                   </Link>
                 </div>
                 <div className="card">
-                  <Link to={"/"}>
+                  <Link to={"/collection"}>
                     <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213510/hwpqxwbauorgb1j4dkzz.png' alt="Pendant Sets" />
                     <h3>Pendant Sets</h3>
                   </Link>
                 </div>
                 <div className="card">
-                  <Link to={"/"}>
+                  <Link to={"/collection"}>
                     <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213437/du9e89gkhi37gzo1qeiy.png' alt="Earrings" />
                     <h3>Earrings</h3>
                   </Link>
                 </div>
                 <div className="card">
-                  <Link to={"/"}>
+                  <Link to={"/collection"}>
                     <img src='https://res.cloudinary.com/di1qhxfqv/image/upload/v1719213520/pc1xklafieiuis1n5rqq.png' alt="Silver Ornaments" />
                     <h3>Silver Ornaments</h3>
                   </Link>
