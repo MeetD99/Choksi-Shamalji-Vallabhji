@@ -11,9 +11,9 @@ export const PricesProvider = ({ children }) => {
         const accessToken = import.meta.env.VITE_GITHUB_TOKEN;
   
         const response = await fetch(`https://api.github.com/gists/${gistId}`, {
-          headers: {
-            Authorization: `token ${accessToken}`
-          }
+          // headers: {
+          //   Authorization: `token ${accessToken}`
+          // }
         });
   
         if (!response.ok) {
