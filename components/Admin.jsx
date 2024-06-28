@@ -35,7 +35,7 @@ const Admin = () => {
 
     const updateGist = async (updatedPrices) => {
       const gistId = "13583f27f0799d24d6970e94906eb526"; // Replace with your gist ID
-      const accessToken = process.env.VITE_GITHUB_TOKEN; // Replace with your GitHub personal access token
+      const accessToken = import.meta.env.VITE_GITHUB_TOKEN; // Replace with your GitHub personal access token
 
       try {
         const response = await fetch(`https://api.github.com/gists/${gistId}`, {
